@@ -51,7 +51,7 @@ def check_commit_activity(repo_path: str) -> dict:
             "message": "Not a git repository",
         }
 
-    count = len([l for l in result.stdout.strip().splitlines() if l])
+    count = len([line for line in result.stdout.strip().splitlines() if line])
 
     if count >= _MIN_COMMITS:
         return {
