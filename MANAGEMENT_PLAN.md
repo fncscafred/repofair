@@ -33,8 +33,11 @@ The test suite uses `tmp_path` (pytest) to create isolated temporary directories
 
 ## 3. Documentation and Metadata
 
-| Artefact | Purpose |
+| Artefact | Identifier / Location |
 |---|---|
+| Source repository | https://github.com/fncscafred/repofair |
+| Zenodo archive | https://doi.org/10.5281/zenodo.20579202 |
+| DOI | `10.5281/zenodo.20579202` |
 | `README.md` | User-facing documentation: installation, usage, examples |
 | `CITATION.cff` | Machine-readable citation metadata (CFF v1.2.0) |
 | `CHANGELOG.md` | Chronological record of all changes (Keep a Changelog format) |
@@ -73,7 +76,7 @@ GitHub provides automatic geographic redundancy. Commits are signed with the dev
 - **Source code** is publicly available on GitHub under the MIT licence, making it immediately reusable by the research community.
 - **CITATION.cff** ensures the software can be cited correctly in academic publications, supporting the Findability principle.
 - **PyPI publication** (planned post-assignment) will allow installation via `pip install repofair`, maximising Accessibility.
-- **Zenodo** archival (planned) will assign a DOI and provide long-term preservation beyond GitHub's availability guarantees.
+- **Zenodo** archival at [doi.org/10.5281/zenodo.20579202](https://doi.org/10.5281/zenodo.20579202) provides a persistent identifier and long-term preservation beyond GitHub's availability guarantees.
 - The project is designed to be self-auditing: running `repofair .` on this repository should score ≥70/80.
 
 ---
@@ -96,7 +99,7 @@ This project is designed to be a demonstration of FAIR principles applied to res
 
 | Principle | Implementation |
 |---|---|
-| **Findable** | README, CITATION.cff, semantic versioning, planned DOI via Zenodo |
+| **Findable** | README, CITATION.cff, semantic versioning, DOI: 10.5281/zenodo.20579202 |
 | **Accessible** | MIT licence, public GitHub repository, CI/CD pipeline, CONTRIBUTING.md |
 | **Interoperable** | Dockerfile, requirements.txt, standard Python packaging conventions |
 | **Reusable** | MIT licence, clear documentation, versioned releases, contribution guidelines |
