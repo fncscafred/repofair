@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it using the metadata below."
+type: software
+title: repofair
+abstract: >
+  repofair is a FAIR-aligned Python library and command-line tool for auditing
+  the health and Open Science readiness of Git repositories. It evaluates eight
+  dimensions — README, LICENSE, CITATION, CI/CD, reproducible environment,
+  semantic versioning, contribution guidelines, and commit activity — and maps
+  each to the FAIR data principles (Findable, Accessible, Interoperable, Reusable).
+authors:
+  - family-names: Frederick
+    given-names: Francisca
+    affiliation: Universiti Malaysia Sabah
+    email: fnbella97@gmail.com
+repository-code: https://github.com/fncscafred/repofair
+url: https://github.com/fncscafred/repofair
+version: 1.0.0
+date-released: "2026-06-07"
+license: MIT
+keywords:
+  - FAIR data principles
+  - Open Science
+  - repository audit
+  - software quality
+  - reproducibility
+  - Git
+  - Python

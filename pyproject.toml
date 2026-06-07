@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "repofair"
+version = "1.0.0"
+description = "A FAIR-aligned Python library for auditing Git repository health and Open Science readiness"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Francisca Frederick", email = "fnbella97@gmail.com" }]
+requires-python = ">=3.9"
+dependencies = ["rich>=13.0.0"]
+
+[project.scripts]
+repofair = "repofair.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/fncscafred/repofair"
+Repository = "https://github.com/fncscafred/repofair"
