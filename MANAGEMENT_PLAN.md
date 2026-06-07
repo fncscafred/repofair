@@ -93,11 +93,11 @@ GitHub provides automatic geographic redundancy. Commits are signed with the dev
 
 ---
 
-## 9. Reproducibility Architecture
+## 8. Reproducibility Architecture
 
 This section documents the technical strategy used to ensure that repofair can be executed reliably across different environments and over time — a core requirement of the Interoperable and Accessible FAIR principles.
 
-### 9.1 Docker Containerisation
+### 8.1 Docker Containerisation
 
 The `Dockerfile` at the project root defines a fully self-contained execution environment:
 
@@ -136,7 +136,7 @@ This design means any researcher with Docker installed can audit a repository wi
 
 ---
 
-### 9.2 GitHub Actions CI/CD Pipeline
+### 8.2 GitHub Actions CI/CD Pipeline
 
 The pipeline is defined in `.github/workflows/ci.yml` and runs on every push and pull request to `main`.
 
@@ -165,7 +165,8 @@ The matrix spawns four parallel jobs, one per supported Python version. `fail-fa
 |---|---|---|
 | Checkout | `actions/checkout@v4` | Fetch the full repository history |
 | Python setup | `actions/setup-python@v5` | Install the matrix Python version |
-| Install dependencies | `pip install -r requirements.txt` | Install `rich` and `pytest` |
+| Install dependencies | `pip install -r requirements.txt` | Install `rich`, `pytest`, and `flake8` |
+| Lint | `flake8 repofair/ --max-line-length=100` | Enforce PEP 8 style with 100-char line limit |
 | Run tests | `pytest tests/ -v --tb=short` | Execute all 34 unit tests |
 | Self-audit | `python -m repofair.cli . --json` | Audit repofair itself on every CI run |
 
@@ -176,7 +177,7 @@ Because the pipeline declares its Python versions explicitly and installs from a
 
 ---
 
-## 8. FAIR Self-Assessment
+## 9. FAIR Self-Assessment
 
 This project is designed to be a demonstration of FAIR principles applied to research software:
 
